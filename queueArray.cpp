@@ -4,10 +4,14 @@ using namespace std;
 void EnQueue(int *front,int *rear,int queue[]);
 void DeQueue(int *front,int *rear,int queue[]);
 
+int front=0;
+int rear=0;
+
 int  main(){
-    int queue[6];
-    int front=0;
-    int rear=0;
+    int size=0;
+    cout<<"Enter size of array: ";
+    cin>>size;
+    int queue[size];
     int n=1;
     while(n!=0){
         cout<<"\npress1 to insert value\npress2 to delete value\npress3 to print\n";
