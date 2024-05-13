@@ -82,8 +82,9 @@ void insertionSort(int arr[],int size){
         while (j>0 && hold<arr[j-1])
         {
            arr[j]=arr[j-1];
-           arr[j-1]=hold;
            j=j-1;
         }
+        if(arr[j]==arr[j+1])
+            arr[j]=hold;
     }
 }
