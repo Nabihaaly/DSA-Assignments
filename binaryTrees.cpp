@@ -147,7 +147,6 @@ BSTNode* findMax(BSTNode *node){
     while(node->right!=nullptr){
         node=node->right;
     }
-    cout<<" this is max: "<<node->data;
     return node;
 }
 
@@ -180,7 +179,7 @@ BSTNode* deleteNode(BSTNode *node,int toDel){
         else{
             BSTNode* temp=findMax(node->left);
             node->data=temp->data;
-            node->left=deleteNode(temp,temp->data);            
+            node->left=deleteNode(node->left,temp->data);            
             return node;
         }
     }
